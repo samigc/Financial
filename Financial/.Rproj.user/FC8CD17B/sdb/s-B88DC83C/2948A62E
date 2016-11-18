@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "\n = read.csv(\"wheat.csv\",sep = ';')\nwheat = raw[,1:8]\n(wheat)\nraw = read.csv(\"wheat.csv\", sep = ';', col.names = c('month','day', 'year','open','close', 'high', 'low', 'change', '1','2','3','4', '5','6','7'))\nwheat = raw[,1:8]\n#ordering data as a time-series, oldest to newest\nwheat[with(wheat, order(year, month)), ]\nlevels(wheat$month)\nmonth.nameabr = substr(month.name, 1, 3)\nm_fac = factor(wheat$month, levels=month.nameabr)\nwheato = wheat[with(wheat, order(year, m_fac, day)),]\n\n#create a plot showing variance of prices, with splines.\nwheato$delta = wheato$close - wheato$open\nwheato$change*\nwheato[,8:9]\nggplot2()\nchange*",
+    "contents" : "\nwheat = read.csv(\"wheat.csv\",sep = ';')\nwheat = raw[,1:8]\n(wheat)\nraw = read.csv(\"wheat.csv\", sep = ';', col.names = c('month','day', 'year','open','close', 'high', 'low', 'change', '1','2','3','4', '5','6','7'))\nwheat = raw[,1:8]\n#ordering data as a time-series, oldest to newest\nwheat[with(wheat, order(year, month)), ]\nlevels(wheat$month)\nmonth.nameabr = substr(month.name, 1, 3)\nm_fac = factor(wheat$month, levels=month.nameabr)\nwheato = wheat[with(wheat, order(year, m_fac, day)),]\n\n#create a plot showing variance of prices, with splines.\nwheato$delta = wheato$close - wheato$open\nwheato$change*\nwheato[,8:9]\nggplot2()\n",
     "created" : 1479416325881.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "4219922523",
+    "hash" : "1668483517",
     "id" : "2948A62E",
-    "lastKnownWriteTime" : 1479488130,
-    "last_content_update" : 1479488130396,
+    "lastKnownWriteTime" : 1479488189,
+    "last_content_update" : 1479488189957,
     "path" : "C:/Users/sami/git/Financial/Financial/wheat.R",
     "project_path" : "wheat.R",
     "properties" : {

@@ -1,5 +1,5 @@
 
- = read.csv("wheat.csv",sep = ';')
+wheat = read.csv("wheat.csv",sep = ';')
 wheat = raw[,1:8]
 (wheat)
 raw = read.csv("wheat.csv", sep = ';', col.names = c('month','day', 'year','open','close', 'high', 'low', 'change', '1','2','3','4', '5','6','7'))
@@ -16,4 +16,3 @@ wheato$delta = wheato$close - wheato$open
 wheato$change*
 wheato[,8:9]
 ggplot2()
-change*
