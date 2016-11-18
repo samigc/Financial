@@ -2,24 +2,20 @@
 
 import scipy.stats as stats
 import pandas as pd
-import re
 import numpy as np
-import json
-from pprint import pprint
+import matplotlib.pyplot as plt
 
-print("Hola mi corazón")
-#http://www.investing.com/commodities/us-wheat-historical-data
-#source (daily, 17 nov 2015- 17 nov 2016)
-wheat = pd.read_csv('wheat.csv',sep = ';', names = [''])
-with open("wheatjs.js") as wheatjs:
-    wheat =  json.load(wheatjs)
+trigo = pd.read_csv('LSE-WEAT.csv')
+raw = pd.read_csv('wheat.csv',sep = ';', names = ['month','day','year','open','close', 'high', 'low', 'change', '1','2','3','4', '5','6','7'])
+weat = raw.ix[:,:'change']
+df = weat.cumsum()
+plt.figure(); df.plot(); plt.legend(loc= 'best')
+# wheat["dataset"]["data"]
 
-pprint(wheat)
-nombres = wheat["dataset"]["column_names"]
-datos = wheat["dataset"]["data"]
 
-print(nombres)
-print(type(datos))
+
+#print(test)
+#print(type(test))
 
 
 #print(js[0])
