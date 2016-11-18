@@ -17,3 +17,4 @@ compare = pd.concat([wheat,otter],axis=1, join='inner')
 
 compare.plot()
 plt.show()
+

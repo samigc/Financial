@@ -5,17 +5,24 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-trigo = pd.read_csv('LSE-WEAT.csv')
+#trigo = pd.read_csv('LSE-WEAT.csv'
 raw = pd.read_csv('wheat.csv',sep = ';', names = ['month','day','year','open','close', 'high', 'low', 'change', '1','2','3','4', '5','6','7'])
+
 weat = raw.ix[:,:'change']
-df = weat.cumsum()
-plt.figure(); df.plot(); plt.legend(loc= 'best')
-# wheat["dataset"]["data"]
+data = weat.ix[:,['month', 'open']]
+nrow = data.shape[0]
+timest = pd.date_range('17/11/2015', periods = nrow, freq = 'D')
 
+#test = pd.DataFrame({'date': timest})
+test = weat.set_index('date').join(timest)
+#test = data.join(timest)
 
+#acum = data.cumsum()
+#plt.figure(); acum.plot(); plt.legend(loc= 'best')
+#plt.show()
 
-#print(test)
-#print(type(test))
+print(test)
+print(type(test))
 
 
 #print(js[0])
