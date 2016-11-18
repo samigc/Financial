@@ -2,12 +2,12 @@ import pandas as pd
 from numpy import *
 import math
 import matplotlib.pyplot as plt
-<<<<<<< HEAD
+
 weat = pd.read_csv('wheat2.csv', sep =';', names = ['Date','Price','Close', 'High', 'Low', 'Change', '1','2','3','4', '5','6','7'] )
 weat = weat.ix[:,:'Change']
-=======
+
 weat = pd.read_csv('cleanwheat.csv')
->>>>>>> 37d1c798fa8254328fbe286ecf41ef65465fbedf
+
 otro = pd.read_csv('WIKI/ABFS.csv')
 print(weat)
 
@@ -27,8 +27,7 @@ compare = pd.concat([wheat,otter],axis=1, join='inner')
 
 compare.plot()
 plt.show()
-<<<<<<< HEAD
-=======
+
 
 
 # uswt = pd.read_csv('USWHEAT.tsv',sep='\t')

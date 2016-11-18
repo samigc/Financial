@@ -14,7 +14,7 @@ nrow = data.shape[0]
 timest = pd.date_range('17/11/2015', periods = nrow, freq = 'D')
 
 #test = pd.DataFrame({'date': timest})
-test = weat.set_index('open').join(timest)
+test = weat.set_index('date').join(timest)
 #test = data.join(timest)
 
 #acum = data.cumsum()
