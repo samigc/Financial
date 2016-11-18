@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nwheat = read.csv(\"../wheat.csv\", sep = ';', col.names = c('month','day', 'year','open','close', 'high', 'low', 'change'))\n#ordering data as a time-series, oldest to newest\nwheat[with(wheat, order(year, month)), ]\nlevels(wheat$month)\nmonth.nameabr = substr(month.name, 1, 3)\nm_fac = factor(wheat$month, levels=month.nameabr)\nwheato = wheat[with(wheat, order(year, m_fac, day)),]\n\n#create a plot showing variance of prices, with splines.\nwheato$delta = wheato$close - wheato$open\nwheato$change*\nwheato[,8:9]\nggplot2()\nchange*",
+    "created" : 1479416325881.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2128734712",
+    "id" : "2948A62E",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1479421943570,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
