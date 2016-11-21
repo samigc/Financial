@@ -3,7 +3,7 @@ from numpy import *
 import math
 import matplotlib.pyplot as plt
 weat = pd.read_csv('cleanwheat.csv')
-otro = pd.read_csv('WIKI/AAPL.csv')
+otro = pd.read_csv('WIKI/ABFS.csv')
 
 weati = weat.set_index('Date')
 otroi = otro.set_index('Date')
@@ -17,10 +17,3 @@ compare = pd.concat([wheat,otter],axis=1, join='inner')
 
 #compare.plot()
 #plt.show()
-
-from scipy.stats.stats import pearsonr
-pearsonr(compare['wheat'],compare['otter'])
-
-
-production = pd.read_csv('norwhtproduction.csv')
-print(production['Volume (Tons)'].sum())
