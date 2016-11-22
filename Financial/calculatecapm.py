@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.stats.stats import pearsonr
 
 weat = pd.read_csv('cleanwheat.csv')
-otro = pd.read_csv('NYSE_SPY.csv')
+otro = pd.read_csv('WIKI/AAPL.csv')
 sp = pd.read_csv('NYSE_SPY.csv')
 
 

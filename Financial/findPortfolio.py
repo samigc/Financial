@@ -31,10 +31,10 @@ data = pd.concat([data['Oil'],data['Wheat'], data['Beta'] ],axis=1, join='inner'
 
 fig = plt.figure()
 axx = fig.add_subplot(111, projection='3d')
-axx.scatter(xs = data['Oil'],ys=data['Wheat'],zs=data['Beta'])
+axx.scatter(xs = data['Oil'],ys=data['Wheat'],zs=data['Beta'],c='green',s=0.1)
 plt.xlabel('Oil')
 plt.ylabel('Wheat')
-plt.ylabel('Beta')
+axx.set_zlabel('Beta')
 diff = list()
 for i, row in data.iterrows():
     diff.append( np.linalg.norm(np.subtract([-1,-1,0] , list(row))))
@@ -45,8 +45,15 @@ diffs.columns = ["dist"]
 diffs = diffs.sort('dist')
 
 #diffs.hist(bins=50)
-#plt.show()
-#print(diffs)
 
+ndif = (diffs[diffs["dist"]<1])
+for i, row in ndif.iterrows():
+	print(i)
+	axx.scatter(xs = data['Oil'][i],ys=data['Wheat'][i],zs=data['Beta'][i],c='blue',s=10+(50-row*100))
+
+
+
+
+plt.show()
 
 #print(random())

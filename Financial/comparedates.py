@@ -13,7 +13,7 @@ wheat = weati['Price']
 wheat.name = 'wheat'
 otter = otroi['High']
 otter.name = 'otter'
-compare = pd.concat([wheat,otter],axis=1, join='inner')
+compare = pd.concat([wheat,otter],axis=1, join='inner').dropna()
 
 #compare.plot()
 #plt.show()
