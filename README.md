@@ -4,4 +4,4 @@ This repository is the financial analysis of the risk of a wheat distributor in 
 
 ...Its principal risk agents are : electrical energy price , oil prices, weather change, and wheat prices.
 
-...Python and R are the languages used.
+...Python languages is used.
